@@ -5,12 +5,12 @@ t0   = time.time()
 s    = t0
 page = 0
 
-with open('log'+str(t0)+'.log','w') as fobj:
+with open('log'+str(t0)+'.txt','w') as fobj:
     while(True):
         c = sys.stdin.readline()
         if c[0] == 'q':
             break
-        elif c[0].isnumeric():
+        elif c[:-1].isnumeric():
             page = int(c)
         else:
             page += 1
