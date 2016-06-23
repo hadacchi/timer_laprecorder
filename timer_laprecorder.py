@@ -8,7 +8,7 @@ page = 0
 with open('log'+str(t0)+'.txt','w') as fobj:
     while(True):
         c = sys.stdin.readline()
-        if c[0] == 'q':
+        if len(c) == 0 or c[0] == 'q':
             break
         elif c[:-1].isnumeric():
             page = int(c)
